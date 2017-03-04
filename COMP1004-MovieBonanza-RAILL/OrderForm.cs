@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace COMP1004_MovieBonanza_RAILL
 {
-    public partial class Form1 : Form
+    public partial class OrderForm : Form
     {
-        public Form1()
+        public OrderForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace COMP1004_MovieBonanza_RAILL
 {
-    partial class Form1
+    partial class SelectionForm
     {
         /// <summary>
         /// Required designer variable.

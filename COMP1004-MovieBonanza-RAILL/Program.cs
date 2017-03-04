@@ -6,17 +6,27 @@ using System.Windows.Forms;
 
 namespace COMP1004_MovieBonanza_RAILL
 {
-    static class Program
+   public static class Program
     {
-        /// <summary>
+        //declared globally 
+        public static splashScreen MySplashScreen;
+
+        //declared public static form
+        public static SelectionForm MySelectionForm;
+         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+       public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionForm());
+           
+            //initialize splashScreen and selectionForm
+            Program.MySplashScreen = new splashScreen();
+            Program.MySelectionForm = new SelectionForm();
+
+            Application.Run(Program.MySplashScreen);
         }
     }
 }

@@ -119,22 +119,28 @@
             // 
             // titleTextBox
             // 
+            this.titleTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.titleTextBox.Location = new System.Drawing.Point(167, 48);
             this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.ReadOnly = true;
             this.titleTextBox.Size = new System.Drawing.Size(288, 26);
             this.titleTextBox.TabIndex = 1;
             // 
             // categoryTextBox
             // 
+            this.categoryTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.categoryTextBox.Location = new System.Drawing.Point(167, 166);
             this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.ReadOnly = true;
             this.categoryTextBox.Size = new System.Drawing.Size(158, 26);
             this.categoryTextBox.TabIndex = 2;
             // 
             // costTextBox
             // 
+            this.costTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.costTextBox.Location = new System.Drawing.Point(355, 166);
             this.costTextBox.Name = "costTextBox";
+            this.costTextBox.ReadOnly = true;
             this.costTextBox.Size = new System.Drawing.Size(100, 26);
             this.costTextBox.TabIndex = 3;
             // 
@@ -180,12 +186,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 553);
+            this.ControlBox = false;
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.selectionGroupBox);
             this.Controls.Add(this.CurrentMoviesLabel);
             this.Controls.Add(this.UserDirectionsLabel);
             this.Controls.Add(this.MovieListBox);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SelectionForm";
+            this.ShowIcon = false;
             this.Text = "Movie Bonanza- Your Online Streaming Service";
             this.selectionGroupBox.ResumeLayout(false);
             this.selectionGroupBox.PerformLayout();

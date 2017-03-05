@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="movieInfo.cs" />
     <Compile Include="OrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,9 +107,68 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\cedarRapids.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\companyMen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deathRace2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dilemma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eagle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Footloose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnomeoJuliet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\greenHornet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justGoWithIt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mechanic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noStrings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\numberFour.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otherWoman.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realSteel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rite.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roommate.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanctum.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seasonOfTheWitch.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waitingForForever.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wayBack.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

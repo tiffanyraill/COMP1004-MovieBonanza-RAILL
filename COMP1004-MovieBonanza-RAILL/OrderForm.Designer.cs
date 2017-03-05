@@ -158,6 +158,7 @@
             this.backButton2.TabIndex = 3;
             this.backButton2.Text = "Back";
             this.backButton2.UseVisualStyleBackColor = true;
+            this.backButton2.Click += new System.EventHandler(this.backButton2_Click);
             // 
             // cancelButton
             // 
@@ -168,6 +169,7 @@
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // streamButton
             // 

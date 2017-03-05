@@ -32,7 +32,7 @@
             this.UserDirectionsLabel = new System.Windows.Forms.Label();
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.selectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.selectionPictureBox = new System.Windows.Forms.PictureBox();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.categoryTextBox = new System.Windows.Forms.TextBox();
             this.costTextBox = new System.Windows.Forms.TextBox();
@@ -41,7 +41,7 @@
             this.costLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
             this.selectionGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectionPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MovieListBox
@@ -74,6 +74,7 @@
             this.MovieListBox.Size = new System.Drawing.Size(210, 324);
             this.MovieListBox.Sorted = true;
             this.MovieListBox.TabIndex = 0;
+            this.MovieListBox.SelectedIndexChanged += new System.EventHandler(this.MovieListBox_SelectedIndexChanged);
             // 
             // UserDirectionsLabel
             // 
@@ -101,7 +102,7 @@
             this.selectionGroupBox.Controls.Add(this.costTextBox);
             this.selectionGroupBox.Controls.Add(this.categoryTextBox);
             this.selectionGroupBox.Controls.Add(this.titleTextBox);
-            this.selectionGroupBox.Controls.Add(this.pictureBox1);
+            this.selectionGroupBox.Controls.Add(this.selectionPictureBox);
             this.selectionGroupBox.Location = new System.Drawing.Point(309, 151);
             this.selectionGroupBox.Name = "selectionGroupBox";
             this.selectionGroupBox.Size = new System.Drawing.Size(478, 212);
@@ -109,13 +110,15 @@
             this.selectionGroupBox.TabStop = false;
             this.selectionGroupBox.Text = "Your Selection";
             // 
-            // pictureBox1
+            // selectionPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(18, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 167);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.selectionPictureBox.ErrorImage = null;
+            this.selectionPictureBox.Location = new System.Drawing.Point(18, 25);
+            this.selectionPictureBox.Name = "selectionPictureBox";
+            this.selectionPictureBox.Size = new System.Drawing.Size(114, 167);
+            this.selectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.selectionPictureBox.TabIndex = 0;
+            this.selectionPictureBox.TabStop = false;
             // 
             // titleTextBox
             // 
@@ -174,12 +177,14 @@
             // nextButton
             // 
             this.nextButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.nextButton.Enabled = false;
             this.nextButton.Location = new System.Drawing.Point(678, 436);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(109, 39);
             this.nextButton.TabIndex = 4;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // SelectionForm
             // 
@@ -199,7 +204,7 @@
             this.Text = "Movie Bonanza- Your Online Streaming Service";
             this.selectionGroupBox.ResumeLayout(false);
             this.selectionGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selectionPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,7 +222,7 @@
         private System.Windows.Forms.TextBox costTextBox;
         private System.Windows.Forms.TextBox categoryTextBox;
         private System.Windows.Forms.TextBox titleTextBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox selectionPictureBox;
         private System.Windows.Forms.Button nextButton;
     }
 }

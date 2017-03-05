@@ -32,7 +32,6 @@
             this.UserDirectionsLabel = new System.Windows.Forms.Label();
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.selectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.selectionPictureBox = new System.Windows.Forms.PictureBox();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.categoryTextBox = new System.Windows.Forms.TextBox();
             this.costTextBox = new System.Windows.Forms.TextBox();
@@ -40,14 +39,16 @@
             this.categoryLabel = new System.Windows.Forms.Label();
             this.costLabel = new System.Windows.Forms.Label();
             this.nextButton = new System.Windows.Forms.Button();
+            this.selectionPictureBox = new System.Windows.Forms.PictureBox();
             this.selectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectionPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MovieListBox
             // 
+            this.MovieListBox.Font = new System.Drawing.Font("Berlin Sans FB", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MovieListBox.FormattingEnabled = true;
-            this.MovieListBox.ItemHeight = 20;
+            this.MovieListBox.ItemHeight = 23;
             this.MovieListBox.Items.AddRange(new object[] {
             "Cedar Rapids",
             "Company Men",
@@ -69,28 +70,32 @@
             "The Roommate",
             "The Way Back",
             "Waiting for Forever"});
-            this.MovieListBox.Location = new System.Drawing.Point(47, 151);
+            this.MovieListBox.Location = new System.Drawing.Point(23, 200);
             this.MovieListBox.Name = "MovieListBox";
-            this.MovieListBox.Size = new System.Drawing.Size(210, 324);
+            this.MovieListBox.Size = new System.Drawing.Size(210, 303);
             this.MovieListBox.Sorted = true;
             this.MovieListBox.TabIndex = 0;
             this.MovieListBox.SelectedIndexChanged += new System.EventHandler(this.MovieListBox_SelectedIndexChanged);
             // 
             // UserDirectionsLabel
             // 
-            this.UserDirectionsLabel.AutoSize = true;
-            this.UserDirectionsLabel.Location = new System.Drawing.Point(47, 31);
+            this.UserDirectionsLabel.Font = new System.Drawing.Font("Broadway", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserDirectionsLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.UserDirectionsLabel.Location = new System.Drawing.Point(23, 25);
             this.UserDirectionsLabel.Name = "UserDirectionsLabel";
-            this.UserDirectionsLabel.Size = new System.Drawing.Size(436, 20);
+            this.UserDirectionsLabel.Size = new System.Drawing.Size(748, 88);
             this.UserDirectionsLabel.TabIndex = 1;
             this.UserDirectionsLabel.Text = "Choose the Movie You Wish to STREAM from the List Below";
+            this.UserDirectionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CurrentMoviesLabel
             // 
             this.CurrentMoviesLabel.AutoSize = true;
-            this.CurrentMoviesLabel.Location = new System.Drawing.Point(95, 117);
+            this.CurrentMoviesLabel.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentMoviesLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CurrentMoviesLabel.Location = new System.Drawing.Point(25, 149);
             this.CurrentMoviesLabel.Name = "CurrentMoviesLabel";
-            this.CurrentMoviesLabel.Size = new System.Drawing.Size(115, 20);
+            this.CurrentMoviesLabel.Size = new System.Drawing.Size(208, 27);
             this.CurrentMoviesLabel.TabIndex = 2;
             this.CurrentMoviesLabel.Text = "Current Movies";
             // 
@@ -103,74 +108,66 @@
             this.selectionGroupBox.Controls.Add(this.categoryTextBox);
             this.selectionGroupBox.Controls.Add(this.titleTextBox);
             this.selectionGroupBox.Controls.Add(this.selectionPictureBox);
-            this.selectionGroupBox.Location = new System.Drawing.Point(309, 151);
+            this.selectionGroupBox.Font = new System.Drawing.Font("Broadway", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectionGroupBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.selectionGroupBox.Location = new System.Drawing.Point(273, 149);
             this.selectionGroupBox.Name = "selectionGroupBox";
-            this.selectionGroupBox.Size = new System.Drawing.Size(478, 212);
+            this.selectionGroupBox.Size = new System.Drawing.Size(498, 280);
             this.selectionGroupBox.TabIndex = 3;
             this.selectionGroupBox.TabStop = false;
             this.selectionGroupBox.Text = "Your Selection";
             // 
-            // selectionPictureBox
-            // 
-            this.selectionPictureBox.ErrorImage = null;
-            this.selectionPictureBox.Location = new System.Drawing.Point(18, 25);
-            this.selectionPictureBox.Name = "selectionPictureBox";
-            this.selectionPictureBox.Size = new System.Drawing.Size(114, 167);
-            this.selectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.selectionPictureBox.TabIndex = 0;
-            this.selectionPictureBox.TabStop = false;
-            // 
             // titleTextBox
             // 
             this.titleTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.titleTextBox.Location = new System.Drawing.Point(167, 48);
+            this.titleTextBox.Location = new System.Drawing.Point(167, 100);
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.ReadOnly = true;
-            this.titleTextBox.Size = new System.Drawing.Size(288, 26);
+            this.titleTextBox.Size = new System.Drawing.Size(288, 32);
             this.titleTextBox.TabIndex = 1;
             // 
             // categoryTextBox
             // 
             this.categoryTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.categoryTextBox.Location = new System.Drawing.Point(167, 166);
+            this.categoryTextBox.Location = new System.Drawing.Point(167, 190);
             this.categoryTextBox.Name = "categoryTextBox";
             this.categoryTextBox.ReadOnly = true;
-            this.categoryTextBox.Size = new System.Drawing.Size(158, 26);
+            this.categoryTextBox.Size = new System.Drawing.Size(158, 32);
             this.categoryTextBox.TabIndex = 2;
             // 
             // costTextBox
             // 
             this.costTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.costTextBox.Location = new System.Drawing.Point(355, 166);
+            this.costTextBox.Location = new System.Drawing.Point(355, 190);
             this.costTextBox.Name = "costTextBox";
             this.costTextBox.ReadOnly = true;
-            this.costTextBox.Size = new System.Drawing.Size(100, 26);
+            this.costTextBox.Size = new System.Drawing.Size(100, 32);
             this.costTextBox.TabIndex = 3;
             // 
             // titleLabel
             // 
             this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(163, 25);
+            this.titleLabel.Location = new System.Drawing.Point(163, 61);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(38, 20);
+            this.titleLabel.Size = new System.Drawing.Size(66, 25);
             this.titleLabel.TabIndex = 4;
             this.titleLabel.Text = "Title";
             // 
             // categoryLabel
             // 
             this.categoryLabel.AutoSize = true;
-            this.categoryLabel.Location = new System.Drawing.Point(163, 129);
+            this.categoryLabel.Location = new System.Drawing.Point(163, 153);
             this.categoryLabel.Name = "categoryLabel";
-            this.categoryLabel.Size = new System.Drawing.Size(73, 20);
+            this.categoryLabel.Size = new System.Drawing.Size(116, 25);
             this.categoryLabel.TabIndex = 5;
             this.categoryLabel.Text = "Category";
             // 
             // costLabel
             // 
             this.costLabel.AutoSize = true;
-            this.costLabel.Location = new System.Drawing.Point(351, 129);
+            this.costLabel.Location = new System.Drawing.Point(351, 153);
             this.costLabel.Name = "costLabel";
-            this.costLabel.Size = new System.Drawing.Size(42, 20);
+            this.costLabel.Size = new System.Drawing.Size(62, 25);
             this.costLabel.TabIndex = 6;
             this.costLabel.Text = "Cost";
             // 
@@ -178,7 +175,9 @@
             // 
             this.nextButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.nextButton.Enabled = false;
-            this.nextButton.Location = new System.Drawing.Point(678, 436);
+            this.nextButton.Font = new System.Drawing.Font("Broadway", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextButton.ForeColor = System.Drawing.Color.Black;
+            this.nextButton.Location = new System.Drawing.Point(662, 464);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(109, 39);
             this.nextButton.TabIndex = 4;
@@ -186,11 +185,22 @@
             this.nextButton.UseVisualStyleBackColor = true;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
+            // selectionPictureBox
+            // 
+            this.selectionPictureBox.ErrorImage = null;
+            this.selectionPictureBox.Location = new System.Drawing.Point(28, 61);
+            this.selectionPictureBox.Name = "selectionPictureBox";
+            this.selectionPictureBox.Size = new System.Drawing.Size(114, 161);
+            this.selectionPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.selectionPictureBox.TabIndex = 0;
+            this.selectionPictureBox.TabStop = false;
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 553);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(796, 553);
             this.ControlBox = false;
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.selectionGroupBox);

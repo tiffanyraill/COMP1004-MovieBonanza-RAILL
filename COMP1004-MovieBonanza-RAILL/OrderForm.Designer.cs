@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,26 +37,27 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movieSelectedGroupBox = new System.Windows.Forms.GroupBox();
+            this.cetegoryLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.orderTitleTextBox = new System.Windows.Forms.TextBox();
+            this.orderCategoryTextBox = new System.Windows.Forms.TextBox();
             this.yourOrderGroupBox = new System.Windows.Forms.GroupBox();
+            this.orderDVDcheckBox = new System.Windows.Forms.CheckBox();
+            this.orderTotalLabel = new System.Windows.Forms.Label();
+            this.orderTaxLabel = new System.Windows.Forms.Label();
+            this.orderSubtotalLabel = new System.Windows.Forms.Label();
+            this.orderDVDLabel = new System.Windows.Forms.Label();
+            this.orderCostLabel = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.orderTaxTextBox = new System.Windows.Forms.TextBox();
+            this.orderSubtotalTextBox = new System.Windows.Forms.TextBox();
+            this.orderTotalTextBox = new System.Windows.Forms.TextBox();
+            this.orderCostTextBox = new System.Windows.Forms.TextBox();
             this.backButton2 = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.streamButton = new System.Windows.Forms.Button();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.orderPictureBox = new System.Windows.Forms.PictureBox();
-            this.orderCategoryTextBox = new System.Windows.Forms.TextBox();
-            this.orderTitleTextBox = new System.Windows.Forms.TextBox();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.cetegoryLabel = new System.Windows.Forms.Label();
-            this.orderCostTextBox = new System.Windows.Forms.TextBox();
-            this.orderTotalTextBox = new System.Windows.Forms.TextBox();
-            this.orderSubtotalTextBox = new System.Windows.Forms.TextBox();
-            this.orderTaxTextBox = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.orderCostLabel = new System.Windows.Forms.Label();
-            this.orderDVDLabel = new System.Windows.Forms.Label();
-            this.orderSubtotalLabel = new System.Windows.Forms.Label();
-            this.orderTaxLabel = new System.Windows.Forms.Label();
-            this.orderTotalLabel = new System.Windows.Forms.Label();
-            this.orderDVDcheckBox = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.movieSelectedGroupBox.SuspendLayout();
             this.yourOrderGroupBox.SuspendLayout();
@@ -87,19 +89,21 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.streamToolStripMenuItem.Text = "Strea&m";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this.streamButton_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(153, 30);
             this.cancelToolStripMenuItem.Text = "Canc&el";
             // 
             // helpToolStripMenuItem
@@ -115,6 +119,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
             this.aboutToolStripMenuItem.Text = "&About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // movieSelectedGroupBox
             // 
@@ -129,6 +134,42 @@
             this.movieSelectedGroupBox.TabIndex = 1;
             this.movieSelectedGroupBox.TabStop = false;
             this.movieSelectedGroupBox.Text = "Movie Selected";
+            // 
+            // cetegoryLabel
+            // 
+            this.cetegoryLabel.AutoSize = true;
+            this.cetegoryLabel.Location = new System.Drawing.Point(16, 111);
+            this.cetegoryLabel.Name = "cetegoryLabel";
+            this.cetegoryLabel.Size = new System.Drawing.Size(73, 20);
+            this.cetegoryLabel.TabIndex = 4;
+            this.cetegoryLabel.Text = "Category";
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Location = new System.Drawing.Point(16, 40);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(38, 20);
+            this.titleLabel.TabIndex = 3;
+            this.titleLabel.Text = "Title";
+            // 
+            // orderTitleTextBox
+            // 
+            this.orderTitleTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.orderTitleTextBox.Location = new System.Drawing.Point(16, 66);
+            this.orderTitleTextBox.Name = "orderTitleTextBox";
+            this.orderTitleTextBox.ReadOnly = true;
+            this.orderTitleTextBox.Size = new System.Drawing.Size(316, 26);
+            this.orderTitleTextBox.TabIndex = 2;
+            // 
+            // orderCategoryTextBox
+            // 
+            this.orderCategoryTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.orderCategoryTextBox.Location = new System.Drawing.Point(16, 134);
+            this.orderCategoryTextBox.Name = "orderCategoryTextBox";
+            this.orderCategoryTextBox.ReadOnly = true;
+            this.orderCategoryTextBox.Size = new System.Drawing.Size(316, 26);
+            this.orderCategoryTextBox.TabIndex = 1;
             // 
             // yourOrderGroupBox
             // 
@@ -149,6 +190,108 @@
             this.yourOrderGroupBox.TabIndex = 2;
             this.yourOrderGroupBox.TabStop = false;
             this.yourOrderGroupBox.Text = "Your Order";
+            // 
+            // orderDVDcheckBox
+            // 
+            this.orderDVDcheckBox.AutoSize = true;
+            this.orderDVDcheckBox.Location = new System.Drawing.Point(16, 382);
+            this.orderDVDcheckBox.Name = "orderDVDcheckBox";
+            this.orderDVDcheckBox.Size = new System.Drawing.Size(345, 24);
+            this.orderDVDcheckBox.TabIndex = 10;
+            this.orderDVDcheckBox.Text = "Order the DVD (Adds $10.00 to Your Order)";
+            this.orderDVDcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // orderTotalLabel
+            // 
+            this.orderTotalLabel.AutoSize = true;
+            this.orderTotalLabel.Location = new System.Drawing.Point(94, 275);
+            this.orderTotalLabel.Name = "orderTotalLabel";
+            this.orderTotalLabel.Size = new System.Drawing.Size(93, 20);
+            this.orderTotalLabel.TabIndex = 9;
+            this.orderTotalLabel.Text = "Grand Total";
+            // 
+            // orderTaxLabel
+            // 
+            this.orderTaxLabel.AutoSize = true;
+            this.orderTaxLabel.Location = new System.Drawing.Point(63, 223);
+            this.orderTaxLabel.Name = "orderTaxLabel";
+            this.orderTaxLabel.Size = new System.Drawing.Size(124, 20);
+            this.orderTaxLabel.TabIndex = 8;
+            this.orderTaxLabel.Text = "Sales Tax (13%)";
+            // 
+            // orderSubtotalLabel
+            // 
+            this.orderSubtotalLabel.AutoSize = true;
+            this.orderSubtotalLabel.Location = new System.Drawing.Point(118, 168);
+            this.orderSubtotalLabel.Name = "orderSubtotalLabel";
+            this.orderSubtotalLabel.Size = new System.Drawing.Size(69, 20);
+            this.orderSubtotalLabel.TabIndex = 7;
+            this.orderSubtotalLabel.Text = "Subtotal";
+            // 
+            // orderDVDLabel
+            // 
+            this.orderDVDLabel.AutoSize = true;
+            this.orderDVDLabel.Location = new System.Drawing.Point(110, 105);
+            this.orderDVDLabel.Name = "orderDVDLabel";
+            this.orderDVDLabel.Size = new System.Drawing.Size(77, 20);
+            this.orderDVDLabel.TabIndex = 6;
+            this.orderDVDLabel.Text = "Add DVD";
+            this.orderDVDLabel.Visible = false;
+            // 
+            // orderCostLabel
+            // 
+            this.orderCostLabel.AutoSize = true;
+            this.orderCostLabel.Location = new System.Drawing.Point(136, 61);
+            this.orderCostLabel.Name = "orderCostLabel";
+            this.orderCostLabel.Size = new System.Drawing.Size(42, 20);
+            this.orderCostLabel.TabIndex = 5;
+            this.orderCostLabel.Text = "Cost";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox5.Location = new System.Drawing.Point(196, 105);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.TabIndex = 4;
+            this.textBox5.Visible = false;
+            // 
+            // orderTaxTextBox
+            // 
+            this.orderTaxTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.orderTaxTextBox.Location = new System.Drawing.Point(196, 220);
+            this.orderTaxTextBox.Name = "orderTaxTextBox";
+            this.orderTaxTextBox.ReadOnly = true;
+            this.orderTaxTextBox.Size = new System.Drawing.Size(100, 26);
+            this.orderTaxTextBox.TabIndex = 3;
+            // 
+            // orderSubtotalTextBox
+            // 
+            this.orderSubtotalTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.orderSubtotalTextBox.Location = new System.Drawing.Point(196, 162);
+            this.orderSubtotalTextBox.Name = "orderSubtotalTextBox";
+            this.orderSubtotalTextBox.ReadOnly = true;
+            this.orderSubtotalTextBox.Size = new System.Drawing.Size(100, 26);
+            this.orderSubtotalTextBox.TabIndex = 2;
+            // 
+            // orderTotalTextBox
+            // 
+            this.orderTotalTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.orderTotalTextBox.Location = new System.Drawing.Point(196, 269);
+            this.orderTotalTextBox.Name = "orderTotalTextBox";
+            this.orderTotalTextBox.ReadOnly = true;
+            this.orderTotalTextBox.Size = new System.Drawing.Size(100, 26);
+            this.orderTotalTextBox.TabIndex = 1;
+            // 
+            // orderCostTextBox
+            // 
+            this.orderCostTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.orderCostTextBox.Location = new System.Drawing.Point(196, 55);
+            this.orderCostTextBox.Name = "orderCostTextBox";
+            this.orderCostTextBox.ReadOnly = true;
+            this.orderCostTextBox.Size = new System.Drawing.Size(100, 26);
+            this.orderCostTextBox.TabIndex = 0;
             // 
             // backButton2
             // 
@@ -179,6 +322,17 @@
             this.streamButton.TabIndex = 5;
             this.streamButton.Text = "Stream!";
             this.streamButton.UseVisualStyleBackColor = true;
+            this.streamButton.Click += new System.EventHandler(this.streamButton_Click);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // orderPictureBox
             // 
@@ -187,144 +341,6 @@
             this.orderPictureBox.Size = new System.Drawing.Size(316, 352);
             this.orderPictureBox.TabIndex = 0;
             this.orderPictureBox.TabStop = false;
-            // 
-            // orderCategoryTextBox
-            // 
-            this.orderCategoryTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.orderCategoryTextBox.Location = new System.Drawing.Point(16, 134);
-            this.orderCategoryTextBox.Name = "orderCategoryTextBox";
-            this.orderCategoryTextBox.ReadOnly = true;
-            this.orderCategoryTextBox.Size = new System.Drawing.Size(316, 26);
-            this.orderCategoryTextBox.TabIndex = 1;
-            // 
-            // orderTitleTextBox
-            // 
-            this.orderTitleTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.orderTitleTextBox.Location = new System.Drawing.Point(16, 66);
-            this.orderTitleTextBox.Name = "orderTitleTextBox";
-            this.orderTitleTextBox.ReadOnly = true;
-            this.orderTitleTextBox.Size = new System.Drawing.Size(316, 26);
-            this.orderTitleTextBox.TabIndex = 2;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(16, 40);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(38, 20);
-            this.titleLabel.TabIndex = 3;
-            this.titleLabel.Text = "Title";
-            // 
-            // cetegoryLabel
-            // 
-            this.cetegoryLabel.AutoSize = true;
-            this.cetegoryLabel.Location = new System.Drawing.Point(16, 111);
-            this.cetegoryLabel.Name = "cetegoryLabel";
-            this.cetegoryLabel.Size = new System.Drawing.Size(73, 20);
-            this.cetegoryLabel.TabIndex = 4;
-            this.cetegoryLabel.Text = "Category";
-            // 
-            // orderCostTextBox
-            // 
-            this.orderCostTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.orderCostTextBox.Location = new System.Drawing.Point(196, 55);
-            this.orderCostTextBox.Name = "orderCostTextBox";
-            this.orderCostTextBox.ReadOnly = true;
-            this.orderCostTextBox.Size = new System.Drawing.Size(100, 26);
-            this.orderCostTextBox.TabIndex = 0;
-            // 
-            // orderTotalTextBox
-            // 
-            this.orderTotalTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.orderTotalTextBox.Location = new System.Drawing.Point(196, 269);
-            this.orderTotalTextBox.Name = "orderTotalTextBox";
-            this.orderTotalTextBox.ReadOnly = true;
-            this.orderTotalTextBox.Size = new System.Drawing.Size(100, 26);
-            this.orderTotalTextBox.TabIndex = 1;
-            // 
-            // orderSubtotalTextBox
-            // 
-            this.orderSubtotalTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.orderSubtotalTextBox.Location = new System.Drawing.Point(196, 162);
-            this.orderSubtotalTextBox.Name = "orderSubtotalTextBox";
-            this.orderSubtotalTextBox.ReadOnly = true;
-            this.orderSubtotalTextBox.Size = new System.Drawing.Size(100, 26);
-            this.orderSubtotalTextBox.TabIndex = 2;
-            // 
-            // orderTaxTextBox
-            // 
-            this.orderTaxTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.orderTaxTextBox.Location = new System.Drawing.Point(196, 220);
-            this.orderTaxTextBox.Name = "orderTaxTextBox";
-            this.orderTaxTextBox.ReadOnly = true;
-            this.orderTaxTextBox.Size = new System.Drawing.Size(100, 26);
-            this.orderTaxTextBox.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox5.Location = new System.Drawing.Point(196, 105);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
-            this.textBox5.TabIndex = 4;
-            this.textBox5.Visible = false;
-            // 
-            // orderCostLabel
-            // 
-            this.orderCostLabel.AutoSize = true;
-            this.orderCostLabel.Location = new System.Drawing.Point(136, 61);
-            this.orderCostLabel.Name = "orderCostLabel";
-            this.orderCostLabel.Size = new System.Drawing.Size(42, 20);
-            this.orderCostLabel.TabIndex = 5;
-            this.orderCostLabel.Text = "Cost";
-            // 
-            // orderDVDLabel
-            // 
-            this.orderDVDLabel.AutoSize = true;
-            this.orderDVDLabel.Location = new System.Drawing.Point(110, 105);
-            this.orderDVDLabel.Name = "orderDVDLabel";
-            this.orderDVDLabel.Size = new System.Drawing.Size(77, 20);
-            this.orderDVDLabel.TabIndex = 6;
-            this.orderDVDLabel.Text = "Add DVD";
-            this.orderDVDLabel.Visible = false;
-            // 
-            // orderSubtotalLabel
-            // 
-            this.orderSubtotalLabel.AutoSize = true;
-            this.orderSubtotalLabel.Location = new System.Drawing.Point(118, 168);
-            this.orderSubtotalLabel.Name = "orderSubtotalLabel";
-            this.orderSubtotalLabel.Size = new System.Drawing.Size(69, 20);
-            this.orderSubtotalLabel.TabIndex = 7;
-            this.orderSubtotalLabel.Text = "Subtotal";
-            // 
-            // orderTaxLabel
-            // 
-            this.orderTaxLabel.AutoSize = true;
-            this.orderTaxLabel.Location = new System.Drawing.Point(63, 223);
-            this.orderTaxLabel.Name = "orderTaxLabel";
-            this.orderTaxLabel.Size = new System.Drawing.Size(124, 20);
-            this.orderTaxLabel.TabIndex = 8;
-            this.orderTaxLabel.Text = "Sales Tax (13%)";
-            // 
-            // orderTotalLabel
-            // 
-            this.orderTotalLabel.AutoSize = true;
-            this.orderTotalLabel.Location = new System.Drawing.Point(94, 275);
-            this.orderTotalLabel.Name = "orderTotalLabel";
-            this.orderTotalLabel.Size = new System.Drawing.Size(93, 20);
-            this.orderTotalLabel.TabIndex = 9;
-            this.orderTotalLabel.Text = "Grand Total";
-            // 
-            // orderDVDcheckBox
-            // 
-            this.orderDVDcheckBox.AutoSize = true;
-            this.orderDVDcheckBox.Location = new System.Drawing.Point(16, 382);
-            this.orderDVDcheckBox.Name = "orderDVDcheckBox";
-            this.orderDVDcheckBox.Size = new System.Drawing.Size(345, 24);
-            this.orderDVDcheckBox.TabIndex = 10;
-            this.orderDVDcheckBox.Text = "Order the DVD (Adds $10.00 to Your Order)";
-            this.orderDVDcheckBox.UseVisualStyleBackColor = true;
             // 
             // OrderForm
             // 
@@ -386,5 +402,6 @@
         private System.Windows.Forms.TextBox orderSubtotalTextBox;
         private System.Windows.Forms.TextBox orderTotalTextBox;
         private System.Windows.Forms.TextBox orderCostTextBox;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -210,10 +210,9 @@ namespace COMP1004_MovieBonanza_RAILL
         public void PreviousFormSelections()
         {
             titleTextBox.Text = Program.MyMovieInfo.title;
-            categoryTextBox.Text = Program.MyMovieInfo.category;
             costTextBox.Text = Program.MyMovieInfo.cost;
-
-
+            categoryTextBox.Text = Program.MyMovieInfo.category;
+            
             MovieListBox.Text = titleTextBox.Text;
         }
     }

@@ -18,7 +18,7 @@ namespace COMP1004_MovieBonanza_RAILL
 {
     public partial class OrderForm : Form
     {
-        //public SelectionForm previousForm { get; set; }
+        SelectionForm selectionForm = new SelectionForm();
 
         public OrderForm()
         {
@@ -34,10 +34,36 @@ namespace COMP1004_MovieBonanza_RAILL
         {
             //hide current form
             this.Hide();
-            // 1. Instantiate the previous form
-            SelectionForm selectionForm = new SelectionForm();
+            
             selectionForm.Show();
-           
+            // Instantiate the previous form
+            selectionForm.PreviousFormSelections();
+
+        }
+
+        private void streamButton_Click(object sender, EventArgs e)
+        {
+            //instantiate the next form
+            StreamForm streamForm = new StreamForm();
+
+            streamForm.Show();
+            //hide current form
+            this.Hide();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                // STEP 1: Create a new form
+                AboutForm aboutForm = new AboutForm();
+                //STEP 2: Show the about form with ShowDialogue (a modal method that displays the form)
+                aboutForm.ShowDialog();
+            }
         }
     }
 }

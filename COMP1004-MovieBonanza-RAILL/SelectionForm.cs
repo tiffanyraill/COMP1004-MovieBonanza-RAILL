@@ -31,6 +31,7 @@ namespace COMP1004_MovieBonanza_RAILL
             _movieImage();
            // _movieCategory();
             nextButton.Enabled = true;
+            SaveSelection();
 
         }
 

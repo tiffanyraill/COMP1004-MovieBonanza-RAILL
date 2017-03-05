@@ -22,6 +22,11 @@ namespace COMP1004_MovieBonanza_RAILL
         {
             InitializeComponent();
         }
+        private void StreamForm_Load(object sender, EventArgs e)
+        {
+            selectionLabel.Text = "    Your movie is: " + Program.MyMovieInfo.title + "\r\n"
+                + "Your credit card will be charged: " + "$" + Program.MyMovieInfo.cost;
+        }
 
         private void okButton_Click(object sender, EventArgs e)
         {

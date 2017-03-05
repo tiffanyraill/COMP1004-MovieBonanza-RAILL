@@ -24,7 +24,15 @@ namespace COMP1004_MovieBonanza_RAILL
         {
             InitializeComponent();
         }
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+            orderTitleTextBox.Text = Program.MyMovieInfo.title;
+            orderCategoryTextBox.Text = Program.MyMovieInfo.category;
+            orderPictureBox.Image = Program.MyMovieInfo.image;
+            orderCostTextBox.Text = "$" + Program.MyMovieInfo.cost;
 
+            _getTotalCost();
+        }
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -65,5 +73,43 @@ namespace COMP1004_MovieBonanza_RAILL
                 aboutForm.ShowDialog();
             }
         }
+        private void _getTotalCost()
+        {
+            if (orderDVDcheckBox.Checked == true)
+            {
+            
+                double SubTotal = Convert.ToDouble(Program.MyMovieInfo.cost) + 10;
+                double Taxes = SubTotal * 0.13;
+                double cost = SubTotal * 1.13;
+
+                orderSubtotalTextBox.Text = SubTotal.ToString("C2");
+                orderTaxTextBox.Text = Taxes.ToString("C2");
+                orderTotalTextBox.Text = cost.ToString("C2");
+                Program.MyMovieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
+
+                orderDVDLabel.Show();
+                addDvdTextBox.Show();
+
+            }
+            else
+            {
+                double SubTotal = Convert.ToDouble(Program.MyMovieInfo.cost);
+                double Taxes = SubTotal * 0.13;
+                double cost = SubTotal * 1.13;
+
+                orderSubtotalTextBox.Text = SubTotal.ToString("C2");
+                orderTaxTextBox.Text = Taxes.ToString("C2");
+                orderTotalTextBox.Text = cost.ToString("C2");
+                Program.MyMovieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
+
+                orderDVDLabel.Hide();
+                addDvdTextBox.Hide();
+            }
+        }
+        private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            _getTotalCost();
+        }
+        
     }
 }

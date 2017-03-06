@@ -31,7 +31,7 @@ namespace COMP1004_MovieBonanza_RAILL
             _movieImage();
 
             nextButton.Enabled = true;
-            SaveSelection();
+          
 
         }
 
@@ -183,9 +183,9 @@ namespace COMP1004_MovieBonanza_RAILL
         {
             try
             {
-                Program.movieInfo.title = titleTextBox.Text;
-                Program.movieInfo.category = categoryTextBox.Text;
-                Program.movieInfo.cost = costTextBox.Text;
+              
+                SaveSelection();
+
             }
             catch
             {
@@ -199,12 +199,11 @@ namespace COMP1004_MovieBonanza_RAILL
             //hides current form
             this.Hide();
         }
-        private void SaveSelection()
+          private void SaveSelection()
         {
             Program.movieInfo.title = titleTextBox.Text;
             Program.movieInfo.cost = costTextBox.Text.TrimStart('$');
             Program.movieInfo.category = categoryTextBox.Text;
-
         }
         
         //save data so when Back is used, previous selections will still apply

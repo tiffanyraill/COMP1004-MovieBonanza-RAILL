@@ -18,11 +18,9 @@ namespace COMP1004_MovieBonanza_RAILL
 {
     public partial class OrderForm : Form
     {
-        SelectionForm selectionForm = new SelectionForm();
+        
         public SelectionForm PreviousForm { get; set; }
-
-        MovieInfo movieInfo = new MovieInfo();
-
+        
         public OrderForm()
         {
             InitializeComponent();
@@ -35,6 +33,7 @@ namespace COMP1004_MovieBonanza_RAILL
 
         private void backButton2_Click(object sender, EventArgs e)
         {
+            SelectionForm selectionForm = new SelectionForm();
             //hide current form
             this.Hide();
 
@@ -74,6 +73,8 @@ namespace COMP1004_MovieBonanza_RAILL
             orderCategoryTextBox.Text = Program.movieInfo.category;
             orderPictureBox.Image = Program.movieInfo.image;
             orderCostTextBox.Text = "$" + Program.movieInfo.cost;
+
+            _getTotalCost();
             
         }
         //this verifies if the add DVD check box is checked, if it is- the dvd label and textbox becomes visible
@@ -84,21 +85,31 @@ namespace COMP1004_MovieBonanza_RAILL
                 orderDVDLabel.Show();
                 addDvdTextBox.Show();
                 addDvdTextBox.Text = "$ 10.00";
+
+                double SubTotal = Convert.ToDouble(Program.movieInfo.cost) + 10;
+                double Taxes = SubTotal * 0.13;
+                double cost = SubTotal * 1.13;
+
+                orderSubtotalTextBox.Text = SubTotal.ToString("C2");
+                orderTaxTextBox.Text = Taxes.ToString("C2");
+                orderTotalTextBox.Text = cost.ToString("C2");
+                Program.movieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
             }
             else
             {
                 orderDVDLabel.Hide();
                 addDvdTextBox.Hide();
                 addDvdTextBox.Text = "";
+
             }
 
         }
-
+        
         private void _getTotalCost()
         {
             if (orderDVDcheckBox.Checked == true)
             {
-                double SubTotal = Convert.ToDouble(Program.movieInfo.cost);
+                double SubTotal = Convert.ToDouble(Program.movieInfo.cost) + 10;
                 double Taxes = SubTotal * 0.13;
                 double cost = SubTotal * 1.13;
 

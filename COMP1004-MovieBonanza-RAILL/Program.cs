@@ -17,12 +17,13 @@ namespace COMP1004_MovieBonanza_RAILL
         //declared public static movieposter form
         public static MovieInfo movieInfo = new MovieInfo();
 
-         /// <summary>
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
        public static void Main()
         {
+             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
            

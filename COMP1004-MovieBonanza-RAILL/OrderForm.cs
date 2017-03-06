@@ -19,20 +19,15 @@ namespace COMP1004_MovieBonanza_RAILL
     public partial class OrderForm : Form
     {
         SelectionForm selectionForm = new SelectionForm();
+        public SelectionForm PreviousForm { get; set; }
+
+        MovieInfo movieInfo = new MovieInfo();
 
         public OrderForm()
         {
             InitializeComponent();
         }
-        private void OrderForm_Load(object sender, EventArgs e)
-        {
-            orderTitleTextBox.Text = Program.MyMovieInfo.title;
-            orderCategoryTextBox.Text = Program.MyMovieInfo.category;
-            orderPictureBox.Image = Program.MyMovieInfo.image;
-            orderCostTextBox.Text = "$" + Program.MyMovieInfo.cost;
 
-            _getTotalCost();
-        }
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -42,7 +37,7 @@ namespace COMP1004_MovieBonanza_RAILL
         {
             //hide current form
             this.Hide();
-            
+
             selectionForm.Show();
             // Instantiate the previous form
             selectionForm.PreviousFormSelections();
@@ -66,50 +61,65 @@ namespace COMP1004_MovieBonanza_RAILL
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            {
-                // STEP 1: Create a new form
-                AboutForm aboutForm = new AboutForm();
-                //STEP 2: Show the about form with ShowDialogue (a modal method that displays the form)
-                aboutForm.ShowDialog();
-            }
+            // STEP 1: Create a new form
+            AboutForm aboutForm = new AboutForm();
+            //STEP 2: Show the about form with ShowDialogue (a modal method that displays the form)
+            aboutForm.ShowDialog();
+
         }
+        //load order form with user selection from previous form "selectionForm"
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+            orderTitleTextBox.Text = Program.movieInfo.title;
+            orderCategoryTextBox.Text = Program.movieInfo.category;
+            orderPictureBox.Image = Program.movieInfo.image;
+            orderCostTextBox.Text = "$" + Program.movieInfo.cost;
+            
+        }
+        //this verifies if the add DVD check box is checked, if it is- the dvd label and textbox becomes visible
+        private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (orderDVDcheckBox.Checked == true)
+            {
+                orderDVDLabel.Show();
+                addDvdTextBox.Show();
+                addDvdTextBox.Text = "$ 10.00";
+            }
+            else
+            {
+                orderDVDLabel.Hide();
+                addDvdTextBox.Hide();
+                addDvdTextBox.Text = "";
+            }
+
+        }
+
         private void _getTotalCost()
         {
             if (orderDVDcheckBox.Checked == true)
             {
-            
-                double SubTotal = Convert.ToDouble(Program.MyMovieInfo.cost) + 10;
+                double SubTotal = Convert.ToDouble(Program.movieInfo.cost);
                 double Taxes = SubTotal * 0.13;
                 double cost = SubTotal * 1.13;
 
                 orderSubtotalTextBox.Text = SubTotal.ToString("C2");
                 orderTaxTextBox.Text = Taxes.ToString("C2");
                 orderTotalTextBox.Text = cost.ToString("C2");
-                Program.MyMovieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
-
-                orderDVDLabel.Show();
-                addDvdTextBox.Show();
+                Program.movieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
 
             }
             else
             {
-                double SubTotal = Convert.ToDouble(Program.MyMovieInfo.cost);
+                double SubTotal = Convert.ToDouble(Program.movieInfo.cost);
                 double Taxes = SubTotal * 0.13;
                 double cost = SubTotal * 1.13;
 
                 orderSubtotalTextBox.Text = SubTotal.ToString("C2");
                 orderTaxTextBox.Text = Taxes.ToString("C2");
                 orderTotalTextBox.Text = cost.ToString("C2");
-                Program.MyMovieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
+                Program.movieInfo.cost = orderTotalTextBox.Text.TrimStart('$');
 
-                orderDVDLabel.Hide();
-                addDvdTextBox.Hide();
             }
         }
-        private void DVDCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            _getTotalCost();
-        }
-        
     }
 }

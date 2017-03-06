@@ -153,6 +153,16 @@ namespace COMP1004_MovieBonanza_RAILL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leftside {
+            get {
+                object obj = ResourceManager.GetObject("leftside", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
@@ -216,6 +226,16 @@ namespace COMP1004_MovieBonanza_RAILL.Properties {
         internal static System.Drawing.Bitmap realSteel {
             get {
                 object obj = ResourceManager.GetObject("realSteel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rightside {
+            get {
+                object obj = ResourceManager.GetObject("rightside", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

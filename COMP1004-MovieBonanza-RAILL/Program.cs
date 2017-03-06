@@ -15,7 +15,7 @@ namespace COMP1004_MovieBonanza_RAILL
         public static SelectionForm MySelectionForm;
 
         //declared public static movieposter form
-        public static movieInfo MyMovieInfo;
+        public static MovieInfo movieInfo = new MovieInfo();
 
          /// <summary>
         /// The main entry point for the application.
@@ -28,8 +28,8 @@ namespace COMP1004_MovieBonanza_RAILL
            
             //initialize splashScreen and selectionForm
             Program.MySplashScreen = new splashScreen();
-            Program.MySelectionForm = new SelectionForm();
-            Program.MyMovieInfo = new movieInfo();
+            //Program.MySelectionForm = new SelectionForm();
+            //Program.MyMovieInfo = new MovieInfo();
 
             Application.Run(Program.MySplashScreen);
         }

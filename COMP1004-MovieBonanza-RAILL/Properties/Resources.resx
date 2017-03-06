@@ -124,20 +124,20 @@
   <data name="companyMen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\companyMen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="greenHornet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\greenHornet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="realSteel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\realSteel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rite.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eagle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eagle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="numberFour" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\numberFour.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Footloose" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Footloose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eagle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eagle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="waitingForForever" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\waitingForForever.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +151,8 @@
   <data name="roommate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\roommate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="otherWoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\otherWoman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gnomeoJuliet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gnomeoJuliet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dilemma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dilemma.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,13 +175,19 @@
   <data name="wayBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wayBack.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gnomeoJuliet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gnomeoJuliet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="greenHornet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\greenHornet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="popcornImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\popcornImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Footloose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Footloose.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="otherWoman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\otherWoman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rightside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="leftside" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\leftside.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

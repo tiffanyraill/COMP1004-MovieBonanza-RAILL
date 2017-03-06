@@ -32,12 +32,12 @@
             this.UserDirectionsLabel = new System.Windows.Forms.Label();
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.selectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.categoryTextBox = new System.Windows.Forms.TextBox();
-            this.costTextBox = new System.Windows.Forms.TextBox();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.categoryLabel = new System.Windows.Forms.Label();
             this.costLabel = new System.Windows.Forms.Label();
+            this.categoryLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.costTextBox = new System.Windows.Forms.TextBox();
+            this.categoryTextBox = new System.Windows.Forms.TextBox();
+            this.titleTextBox = new System.Windows.Forms.TextBox();
             this.nextButton = new System.Windows.Forms.Button();
             this.selectionPictureBox = new System.Windows.Forms.PictureBox();
             this.selectionGroupBox.SuspendLayout();
@@ -117,41 +117,14 @@
             this.selectionGroupBox.TabStop = false;
             this.selectionGroupBox.Text = "Your Selection";
             // 
-            // titleTextBox
+            // costLabel
             // 
-            this.titleTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.titleTextBox.Location = new System.Drawing.Point(167, 100);
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.ReadOnly = true;
-            this.titleTextBox.Size = new System.Drawing.Size(288, 32);
-            this.titleTextBox.TabIndex = 1;
-            // 
-            // categoryTextBox
-            // 
-            this.categoryTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.categoryTextBox.Location = new System.Drawing.Point(167, 190);
-            this.categoryTextBox.Name = "categoryTextBox";
-            this.categoryTextBox.ReadOnly = true;
-            this.categoryTextBox.Size = new System.Drawing.Size(158, 32);
-            this.categoryTextBox.TabIndex = 2;
-            // 
-            // costTextBox
-            // 
-            this.costTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.costTextBox.Location = new System.Drawing.Point(355, 190);
-            this.costTextBox.Name = "costTextBox";
-            this.costTextBox.ReadOnly = true;
-            this.costTextBox.Size = new System.Drawing.Size(100, 32);
-            this.costTextBox.TabIndex = 3;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(163, 61);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(66, 25);
-            this.titleLabel.TabIndex = 4;
-            this.titleLabel.Text = "Title";
+            this.costLabel.AutoSize = true;
+            this.costLabel.Location = new System.Drawing.Point(351, 153);
+            this.costLabel.Name = "costLabel";
+            this.costLabel.Size = new System.Drawing.Size(62, 25);
+            this.costLabel.TabIndex = 6;
+            this.costLabel.Text = "Cost";
             // 
             // categoryLabel
             // 
@@ -162,14 +135,44 @@
             this.categoryLabel.TabIndex = 5;
             this.categoryLabel.Text = "Category";
             // 
-            // costLabel
+            // titleLabel
             // 
-            this.costLabel.AutoSize = true;
-            this.costLabel.Location = new System.Drawing.Point(351, 153);
-            this.costLabel.Name = "costLabel";
-            this.costLabel.Size = new System.Drawing.Size(62, 25);
-            this.costLabel.TabIndex = 6;
-            this.costLabel.Text = "Cost";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Location = new System.Drawing.Point(163, 61);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(66, 25);
+            this.titleLabel.TabIndex = 4;
+            this.titleLabel.Text = "Title";
+            // 
+            // costTextBox
+            // 
+            this.costTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.costTextBox.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.costTextBox.Location = new System.Drawing.Point(355, 190);
+            this.costTextBox.Name = "costTextBox";
+            this.costTextBox.ReadOnly = true;
+            this.costTextBox.Size = new System.Drawing.Size(100, 34);
+            this.costTextBox.TabIndex = 3;
+            // 
+            // categoryTextBox
+            // 
+            this.categoryTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.categoryTextBox.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryTextBox.Location = new System.Drawing.Point(167, 190);
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.ReadOnly = true;
+            this.categoryTextBox.Size = new System.Drawing.Size(158, 34);
+            this.categoryTextBox.TabIndex = 2;
+            // 
+            // titleTextBox
+            // 
+            this.titleTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.titleTextBox.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleTextBox.Location = new System.Drawing.Point(167, 100);
+            this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.ReadOnly = true;
+            this.titleTextBox.Size = new System.Drawing.Size(288, 34);
+            this.titleTextBox.TabIndex = 1;
             // 
             // nextButton
             // 
@@ -211,6 +214,7 @@
             this.MinimizeBox = false;
             this.Name = "SelectionForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Movie Bonanza- Your Online Streaming Service";
             this.selectionGroupBox.ResumeLayout(false);
             this.selectionGroupBox.PerformLayout();

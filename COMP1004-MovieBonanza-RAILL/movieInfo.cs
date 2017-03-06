@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP1004_MovieBonanza_RAILL
 {
-    public class movieInfo
+    public class MovieInfo
     {
         public string title { get; set; }
 
